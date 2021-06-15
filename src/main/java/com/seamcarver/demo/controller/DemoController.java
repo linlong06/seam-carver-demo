@@ -1,12 +1,16 @@
 package com.seamcarver.demo.controller;
 
-import com.seamcarver.demo.models.SeamCarver;
-import edu.princeton.cs.algs4.Picture;
+import java.io.File;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.seamcarver.demo.models.SeamCarver;
+
+import edu.princeton.cs.algs4.Picture;
 
 @Controller
 public class DemoController {
@@ -54,7 +58,8 @@ public class DemoController {
       sc.removeVerticalSeam(verticalSeam);
     } 
     this.resized = sc.picture();
-    this.resized.save("src/main/resources/static" + this.resizedPath);
+    String file = new File("src/main/resources/static" + this.resizedPath).getAbsolutePath();
+    this.resized.save(file);
     return "redirect:/";
   }
 }
