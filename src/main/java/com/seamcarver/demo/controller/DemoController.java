@@ -14,13 +14,13 @@ import edu.princeton.cs.algs4.Picture;
 
 @Controller
 public class DemoController {
-  private String picturePath = "/images/chameleon.png";
+  private String picturePath = "/picture/chameleon.png";
   
-  private String resizedPath = "/images/chameleon_resized.png";
+  private String resizedPath = "/picture/chameleon_resized.png";
   
-  private Picture picture = new Picture("src/main/resources/static" + this.picturePath);
+  private Picture picture = new Picture("upload/chameleon.png");
   
-  private Picture resized = new Picture("src/main/resources/static" + this.resizedPath);
+  private Picture resized = new Picture("upload/chameleon_resized.png");
   
   private int originalWidth = this.picture.width();
   
@@ -58,8 +58,7 @@ public class DemoController {
       sc.removeVerticalSeam(verticalSeam);
     } 
     this.resized = sc.picture();
-    String file = new File("src/main/resources/static" + this.resizedPath).getAbsolutePath();
-    this.resized.save(file);
+    this.resized.save("upload/chameleon_resized.png");
     return "redirect:/";
   }
 }
