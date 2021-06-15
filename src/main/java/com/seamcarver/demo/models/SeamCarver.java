@@ -1,8 +1,6 @@
 package com.seamcarver.demo.models;
 import edu.princeton.cs.algs4.DirectedEdge;
 import edu.princeton.cs.algs4.Picture;
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.Stopwatch;
 
 import java.awt.Color;
 
@@ -215,19 +213,5 @@ public class SeamCarver {
 
     //  unit testing (optional)
     public static void main(String[] args) {
-        Picture picture = new Picture(args[0]);
-        StdOut.printf("image is %d columns by %d rows\n", picture.width(), picture.height());
-
-        Stopwatch sw = new Stopwatch();
-        SeamCarver sc1 = new SeamCarver(picture);
-        SeamCarver sc2 = new SeamCarver(picture);
-
-        Picture p1 = sc1.picture();
-        Picture p2 = sc2.picture();
-
-        // int[] hseam = sc.findHorizontalSeam();
-        // sc.removeHorizontalSeam(hseam);
-        StdOut.println(p1.equals(p2));
-        StdOut.println("Resizing time: " + sw.elapsedTime() + " seconds.");
     }
 }

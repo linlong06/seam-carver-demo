@@ -1,5 +1,4 @@
 package com.seamcarver.demo.models;
-import edu.princeton.cs.algs4.StdOut;
 
 public class DiEdge {
     private final int v;
@@ -19,12 +18,5 @@ public class DiEdge {
     }
 
     public static void main(String[] args) {
-        int width = 3;
-        int height = 4;
-        int V = width * height;
-        for (int i = 0; i < V; i++) {
-            StdOut.println("V = " + i + " Col: " + i % width + " Row: " + i / width);
-        }
-
     }
 }
