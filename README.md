@@ -1,5 +1,7 @@
 This is a demonstration of seam carving algorithm for content-aware image resizing. The application was established using Edge-weighted Graph data structure and topological sort algorithm.
 
+![Optional Text](/seam_carve_demo.png)
+
 For more details regarding this algorithm, please refer to the following website with original paper available for download:
 https://www.seamcarving.com/
 
