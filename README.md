@@ -1,6 +1,4 @@
-This is web-based demo of seam carving algorithm for content-aware image resizing. The website could be accessed via the following link:
-https://seam-carve-demo.herokuapp.com/
-
+This is a demonstration of seam carving algorithm for content-aware image resizing. The application was established using Edge-weighted Graph data structure and topological sort algorithm.
 
 For more details regarding this algorithm, please refer to the following website with original paper available for download:
 https://www.seamcarving.com/
